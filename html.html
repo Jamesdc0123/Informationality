@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> login or sign up form </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form Signup">
+            <header> Signup </header>
+            <form action="#">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password"placeholder="Password" required>
+            <div class="checkbox">
+                <input type="checkbox" id="signupCheck">
+                <label class="label1" for="signupCheck">I accept all terms & conditions</label>
+
+            </div>
+            <input type="submit" value="Sign up">
+        </form>
+    </div>
+        <div class="form login">
+            <header> Login </header>
+            <form action="#">
+            <input type="email" placeholder="Email Address" required>
+            <input type="password"placeholder="Password" required>
+            <a href="">Forgot Password?</a>
+            <input type="submit" value="Login">
+        </form>
+       <br><br><br> <h4> By: James Dela Cruz </h4>
+        </div>
+    </div>
+    <script>
+       const wrapper = document.querySelector(".wrapper"),
+       SignupHeader = document.querySelector(".Signup header"),
+       loginHeader = document.querySelector(".login header");
+
+       loginHeader.addEventListener("click", () => {
+        wrapper.classList.add("active");
+       })
+
+       SignupHeader.addEventListener("click", () => {
+        wrapper.classList.remove("active");
+       })
+
+    </script>
+</body>
+</html>
